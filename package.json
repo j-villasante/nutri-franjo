@@ -1,0 +1,31 @@
+{
+  "name": "nutri-franjo",
+  "version": "1.0.0",
+  "description": "Nutri-Franjo web app with Koa.js and Drizzle ORM",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "koa": "^3.0.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^14.0.0",
+    "koa-session": "^7.0.2",
+    "koa-static": "^5.0.0",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.1"
+  }
+}

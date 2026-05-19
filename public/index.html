@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía · Comer Fuera Sin Salirte de Tu Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F0EFE0;
+  --cream80: #C8C7B4;
+  --cream50: #8A8978;
+  --cream25: #4A4A40;
+  --bg: #141414;
+  --surface: #1E1E1C;
+  --surface2: #272724;
+  --surface3: #2F2F2C;
+  --border: #2E2E2B;
+  --border-strong: #3E3E3A;
+  --table-bg: #F2F0E8;
+  --table-row-alt: #E8E6DC;
+  --table-header: #D8D6CC;
+  --table-text: #1A1A18;
+  --table-text-muted: #4A4944;
+  --table-border: #C8C6BC;
+  --low: #6AAF82;
+  --low-bg: #1A2E21;
+  --low-text: #8FCF9E;
+  --mod: #D4A044;
+  --mod-bg: #2E2210;
+  --mod-text: #E8BC72;
+  --high: #D4605A;
+  --high-bg: #2E1412;
+  --high-text: #E88882;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Almarai', sans-serif;
+  background: var(--bg);
+  color: var(--cream);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── COVER ── */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-strong);
+  background: linear-gradient(160deg, #1a1a18 0%, var(--bg) 60%);
+}
+
+.cover-eyebrow {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--cream80);
+  margin-bottom: 2rem;
+}
+
+.cover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-end;
+}
+
+.cover-title {
+  font-family: 'Almarai', sans-serif;
+  font-size: clamp(56px, 8vw, 120px);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+}
+
+.cover-title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream);
+  opacity: 0.75;
+}
+
+.cover-right {
+  padding-bottom: 0.5rem;
+}
+
+.cover-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.7;
+  max-width: 340px;
+  margin-bottom: 3rem;
+}
+
+.cover-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-num {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cream80);
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.cover-line {
+  position: absolute;
+  top: 0; left: 4rem;
+  right: 4rem;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+/* ── HOW TO USE ── */
+.intro {
+  padding: 5rem 4rem;
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.section-label {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--cream80);
+  margin-bottom: 3rem;
+}
+
+.intro-heading {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--cream);
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+.intro-heading em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream80);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+}
+
+.intro-card {
+  background: var(--bg);
+  padding: 2rem;
+}
+
+.intro-card-num {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--cream80);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.intro-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 0.75rem;
+}
+
+.intro-card p {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.65;
+}
+
+.macro-pills-row {
+  display: flex;
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+  border-top: none;
+}
+
+.macro-pill {
+  flex: 1;
+  background: var(--surface2);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.macro-pill-icon {
+  font-size: 20px;
+}
+
+.macro-pill-letter {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.macro-pill-name {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream80);
+  font-weight: 400;
+}
+
+/* ── LEGEND ── */
+.legend-bar {
+  display: flex;
+  gap: 1px;
+  background: var(--border-strong);
+  border-left: 1px solid var(--border-strong);
+  border-right: 1px solid var(--border-strong);
+}
+
+.legend-item {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-item.low .legend-dot { background: var(--low-text); }
+.legend-item.mod .legend-dot { background: var(--mod-text); }
+.legend-item.high .legend-dot { background: var(--high-text); }
+
+.legend-text-main {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.legend-item.low .legend-text-main { color: var(--low-text); }
+.legend-item.mod .legend-text-main { color: var(--mod-text); }
+.legend-item.high .legend-text-main { color: var(--high-text); }
+
+.legend-text-range {
+  font-size: 10px;
+  color: var(--cream80);
+  font-weight: 300;
+}
+
+/* ── TIP BANNER ── */
+.tip-banner {
+  padding: 1rem 4rem;
+  background: var(--surface3);
+  border-bottom: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 11px;
+  color: var(--cream);
+  font-weight: 300;
+}
+
+.tip-banner strong {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cream80);
+  font-weight: 700;
+}
+
+/* ── CATEGORY ── */
+.category {
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.category-header {
+  padding: 3rem 4rem 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.category-left {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.category-number {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--cream50);
+  font-weight: 700;
+}
+
+.category-name {
+  font-size: clamp(22px, 3vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.category-restaurants {
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--cream80);
+  letter-spacing: 0.05em;
+  text-align: right;
+  max-width: 300px;
+  line-height: 1.7;
+}
+
+/* ── TABLE ── */
+.tier-section {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.tier-section:last-child {
+  border-bottom: none;
+}
+
+.tier-label-row {
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface3);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.tier-badge {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tier-badge.low { background: var(--low-bg); color: var(--low-text); border: 1px solid var(--low); }
+.tier-badge.mod { background: var(--mod-bg); color: var(--mod-text); border: 1px solid var(--mod); }
+.tier-badge.high { background: var(--high-bg); color: var(--high-text); border: 1px solid var(--high); }
+
+.tier-range {
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--cream80);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--table-border);
+}
+
+.data-table thead th {
+  padding: 0.7rem 1.1rem;
+  text-align: center;
+  border-right: 1px solid var(--table-border);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--table-text-muted);
+  border-bottom: 2px solid var(--table-border);
+  white-space: nowrap;
+  background: var(--table-header);
+}
+
+.data-table thead th.num { text-align: center; }
+.data-table thead th.last { border-right: none; }
+
+.data-table tbody tr {
+  border-bottom: none;
+  transition: background 0.15s;
+}
+
+.data-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background: var(--table-row-alt);
+}
+
+
+
+.data-table tbody tr:hover td {
+  background: var(--table-header) !important;
+}
+
+.data-table tbody td {
+  padding: 0.85rem 1.1rem;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--table-text-muted);
+  vertical-align: middle;
+  background: var(--table-bg);
+  border-bottom: 1px solid var(--table-border);
+  border-right: 1px solid var(--table-border);
+  text-align: center;
+}
+.data-table tbody td:last-child {
+  border-right: none;
+}
+
+
+
+.td-restaurant {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--table-text);
+  white-space: nowrap;
+  -webkit-text-stroke: 0.3px var(--table-text);
+  text-align: left;
+}
+
+.td-dish {
+  font-weight: 800;
+  color: var(--table-text);
+  max-width: 220px;
+  line-height: 1.3;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.td-qty {
+  font-size: 10px;
+  color: #9A9890;
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.td-kcal {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+  color: var(--table-text);
+  line-height: 1;
+}
+
+.td-kcal.low { color: var(--low-text); }
+.td-kcal.mod { color: var(--mod-text); }
+.td-kcal.high { color: var(--high-text); }
+
+.td-macro {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--table-text-muted);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+.td-comment {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--table-text-muted);
+  font-style: italic;
+  max-width: 240px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+/* ── TIP INFIX ── */
+.tip-infix {
+  padding: 1.5rem 4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--surface3);
+  border-bottom: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border-strong);
+}
+
+.tip-infix-icon {
+  font-size: 12px;
+  color: var(--cream80);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tip-infix p {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+.tip-infix p strong {
+  font-weight: 700;
+  color: var(--cream);
+}
+
+/* ── FINAL TIPS ── */
+.final-tips {
+  padding: 5rem 4rem;
+  border-top: 2px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.final-tips-heading {
+  font-size: clamp(24px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  line-height: 0.95;
+  max-width: 500px;
+  margin-bottom: 4rem;
+}
+
+.final-tips-heading em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.final-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+}
+
+.final-tip-card {
+  background: var(--bg);
+  padding: 2rem;
+}
+
+.final-tip-icon {
+  font-size: 18px;
+  margin-bottom: 1.25rem;
+  display: block;
+  opacity: 0.7;
+}
+
+.final-tip-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.final-tip-body {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--cream80);
+  line-height: 1.65;
+}
+
+.final-quote {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-strong);
+  text-align: center;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 400;
+  color: var(--cream80);
+  letter-spacing: 0.01em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cover { padding: 2rem; }
+  .cover-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cover-line { left: 2rem; right: 2rem; }
+  .intro { padding: 3rem 2rem; }
+  .intro-grid { grid-template-columns: 1fr 1fr; }
+  .macro-pills-row { flex-wrap: wrap; }
+  .category-header { padding: 2rem 2rem 1.5rem; flex-direction: column; gap: 0.5rem; }
+  .category-restaurants { text-align: left; }
+  .data-table thead th:first-child,
+  .data-table tbody td:first-child { padding-left: 2rem; }
+  .data-table thead th.last,
+  .data-table tbody td:last-child { padding-right: 2rem; }
+  .tier-label-row { padding: 0.75rem 2rem; }
+  .tip-banner { padding: 1rem 2rem; }
+  .tip-infix { padding: 1.25rem 2rem; }
+  .final-tips { padding: 3rem 2rem; }
+  .final-tips-grid { grid-template-columns: 1fr 1fr; }
+  .legend-bar { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+  /* Cover */
+  .cover { padding: 1.5rem 1.25rem 2rem; min-height: 85vh; }
+  .cover-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .cover-title { font-size: clamp(40px, 12vw, 64px); }
+  .cover-stats { gap: 1.5rem; }
+  .cover-line { left: 1.25rem; right: 1.25rem; }
+  .cover-desc { font-size: 13px; margin-bottom: 2rem; }
+
+  /* Intro */
+  .intro { padding: 2rem 1.25rem; }
+  .intro-heading { font-size: clamp(22px, 7vw, 34px); margin-bottom: 2rem; }
+  .intro-grid { grid-template-columns: 1fr; gap: 1px; }
+  .macro-pills-row { flex-direction: column; }
+  .macro-pill { padding: 1rem 1.25rem; }
+
+  /* Legend */
+  .legend-bar { flex-direction: column; }
+  .legend-item { padding: 0.75rem 1.25rem; }
+
+  /* Tip banner */
+  .tip-banner { padding: 0.85rem 1.25rem; font-size: 12px; }
+
+  /* Category header */
+  .category-header { padding: 1.5rem 1.25rem 1rem; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+  .category-name { font-size: clamp(20px, 6vw, 28px); }
+  .category-restaurants { text-align: left; max-width: 100%; }
+  .tier-label-row { padding: 0.6rem 1.25rem; }
+
+  /* TABLE — card layout on mobile */
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display: block; }
+
+  .data-table thead { display: none; }
+
+  .data-table tbody tr {
+    background: var(--table-bg);
+    border: 1px solid var(--table-border);
+    border-radius: 8px;
+    margin: 0.5rem 1.25rem;
+    padding: 0.75rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 0 0.5rem;
+    border-right: 1px solid var(--table-border) !important;
+  }
+
+  .data-table tbody tr:nth-child(even) td { background: transparent; }
+  .data-table tbody td {
+    padding: 0 !important;
+    border: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+
+  /* Grid placement of cells */
+  .td-restaurant {
+    grid-column: 1; grid-row: 1;
+    font-size: 8px;
+    margin-bottom: 2px;
+    color: var(--table-text-muted);
+  }
+  .td-dish {
+    grid-column: 1; grid-row: 2;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .td-qty {
+    display: none;
+  }
+  .td-kcal {
+    grid-column: 2; grid-row: 1 / span 2;
+    font-size: 26px;
+    text-align: right !important;
+    align-self: center;
+    justify-self: end;
+    padding-left: 0.5rem !important;
+    line-height: 1;
+  }
+  .td-comment {
+    grid-column: 1 / span 2; grid-row: 3;
+    font-size: 11px;
+    color: var(--table-text-muted);
+    margin-top: 6px;
+    padding-top: 6px !important;
+    border-top: 1px solid var(--table-border) !important;
+    display: block;
+  }
+  /* Hide macro columns on mobile — too cramped */
+  .td-macro { display: none; }
+
+  /* Tip infix */
+  .tip-infix { padding: 1rem 1.25rem; }
+
+  /* Final tips */
+  .final-tips { padding: 2rem 1.25rem; }
+  .final-tips-heading { font-size: clamp(22px, 7vw, 32px); margin-bottom: 2rem; }
+  .final-tips-grid { grid-template-columns: 1fr; }
+  .final-quote { font-size: 16px; margin-top: 2rem; }
+}
+
+@media print {
+  .category { page-break-inside: avoid; }
+  body { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── COVER ── -->
+<div class="cover">
+  <div class="cover-line"></div>
+  <p class="cover-eyebrow">Guía de nutrición · Lima · 2025</p>
+  <div class="cover-grid">
+    <div>
+      <h1 class="cover-title">Guía para<br>comer fuera<br><em>sin salirte</em><br>de tu plan.</h1>
+    </div>
+    <div class="cover-right">
+      <p class="cover-desc">Aprende a elegir opciones que se adapten a tus kcal y macros en restaurantes, delivery y salidas en Lima.</p>
+      <div class="cover-stats">
+        <div>
+          <div class="stat-num">10</div>
+          <div class="stat-label">Categorías</div>
+        </div>
+        <div>
+          <div class="stat-num">150+</div>
+          <div class="stat-label">Opciones</div>
+        </div>
+        <div>
+          <div class="stat-num">25+</div>
+          <div class="stat-label">Restaurantes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── HOW TO USE ── -->
+<div class="intro">
+  <p class="section-label">Cómo usar esta guía</p>
+  <h2 class="intro-heading">Tu guía para<br><em>comer con inteligencia.</em></h2>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <p class="intro-card-num">01</p>
+      <h3 class="intro-card-title">Revisa tus kcal</h3>
+      <p>Lo primero: revisa cuántas calorías tienes disponibles para esa comida. Encajar las kcal dentro de tu plan es la prioridad. Luego elige la opción más cercana dentro de tu rango.</p>
+    </div>
+    <div class="intro-card">
+      <p class="intro-card-num">02</p>
+      <h3 class="intro-card-title">Ajusta tus macros</h3>
+      <p>Con las kcal controladas, mira proteína, carbohidratos y grasas. Si tienes margen, prefiere opciones con más proteína. Si comes algo alto en grasas, compensa en otra comida.</p>
+    </div>
+    <div class="intro-card">
+      <p class="intro-card-num">03</p>
+      <h3 class="intro-card-title">Para delivery y salidas</h3>
+      <p>Sirve igual para pedir delivery, comer en restaurante o ir a reuniones. Si el lugar no está en la guía, busca un plato similar como referencia para estimar las kcal y macros.</p>
+    </div>
+    <div class="intro-card">
+      <p class="intro-card-num">04</p>
+      <h3 class="intro-card-title">Nada está prohibido</h3>
+      <p>Todo cabe en tu plan si las kcal encajan. Ajusta el resto del día si eliges algo más calórico. La guía te ayuda a decidir con información, no a restringirte. Consistencia = resultados.</p>
+    </div>
+  </div>
+  <div class="macro-pills-row">
+    <div class="macro-pill">
+      <span class="macro-pill-letter">Kcal</span>
+      <span class="macro-pill-name">Calorías</span>
+    </div>
+    <div class="macro-pill">
+      <span class="macro-pill-letter">P</span>
+      <span class="macro-pill-name">Proteína</span>
+    </div>
+    <div class="macro-pill">
+      <span class="macro-pill-letter">C</span>
+      <span class="macro-pill-name">Carbohidratos</span>
+    </div>
+    <div class="macro-pill">
+      <span class="macro-pill-letter">G</span>
+      <span class="macro-pill-name">Grasas</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── LEGEND ── -->
+<div class="legend-bar">
+  <div class="legend-item low">
+    <div class="legend-dot"></div>
+    <span class="legend-text-main">Bajo en kcal</span>
+    <span class="legend-text-range">Hasta 400 kcal</span>
+  </div>
+  <div class="legend-item mod">
+    <div class="legend-dot"></div>
+    <span class="legend-text-main">Moderado en kcal</span>
+    <span class="legend-text-range">401 – 600 kcal</span>
+  </div>
+  <div class="legend-item high">
+    <div class="legend-dot"></div>
+    <span class="legend-text-main">Alto en kcal</span>
+    <span class="legend-text-range">Más de 600 kcal</span>
+  </div>
+</div>
+
+<div class="tip-banner">
+  <strong>Tip</strong>
+  Elige bebidas sin azúcar — el refresco normal puede sumar 150–200 kcal invisibles a tu comida.
+</div>
+
+
+<!-- CAT: Hamburguesas -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">01</span>
+      <h2 class="category-name">Hamburguesas</h2>
+    </div>
+    <p class="category-restaurants">Bembos · McDonald's · Burger King · Big Boy · Friday's · Chilli's</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Hamburguesa con queso</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal low">297</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">34g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">La más ligera del menú — poca saciedad</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Mc Queso</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal low">309</td>
+          <td class="td-macro">13g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Baja en grasas, alta en carbos — poca proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Burger King</td>
+          <td class="td-dish">Whopper Jr</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal low">310</td>
+          <td class="td-macro">13g</td>
+          <td class="td-macro">27g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Opción ligera de BK — moderada en grasa</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Mc Bacon</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal mod">436</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">37g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-comment">Balance decente — moderada en grasas y carbos</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Mc Pollo con queso</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal mod">458</td>
+          <td class="td-macro">18g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en carbos y grasas — baja en proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Hamburguesa clásica</td>
+          <td class="td-qty">1 mediana</td>
+          <td class="td-kcal mod">472</td>
+          <td class="td-macro">19g</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">31g</td>
+          <td class="td-comment">Alta en grasas — ajusta el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Big Mac</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">496</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">22g</td>
+          <td class="td-comment">Equilibrado en macros — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Cuarto de libra</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">510</td>
+          <td class="td-macro">29g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">28g</td>
+          <td class="td-comment">Buena proteína para fast food — moderada en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Hamburguesa clásica</td>
+          <td class="td-qty">1 grande</td>
+          <td class="td-kcal mod">590</td>
+          <td class="td-macro">24g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">39g</td>
+          <td class="td-comment">Muy alta en grasas — poca proteína relativa</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Burger King</td>
+          <td class="td-dish">Whopper Impossible</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal high">620</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">28g</td>
+          <td class="td-macro">34g</td>
+          <td class="td-comment">Alta en grasas, baja en carbos — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Hamburguesa Royal / Queso Tocino</td>
+          <td class="td-qty">1 mediana</td>
+          <td class="td-kcal high">642</td>
+          <td class="td-macro">31g</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-comment">Muy alta en grasas — ajusta el día completo</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Burger King</td>
+          <td class="td-dish">Whopper</td>
+          <td class="td-qty">1 grande</td>
+          <td class="td-kcal high">660</td>
+          <td class="td-macro">28g</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-comment">Alta en grasas y carbos — no es opción pre-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Burger King</td>
+          <td class="td-dish">Stacker</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal high">700</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">48g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-comment">Alta en proteína y grasas — muy saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Cheeseburger</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">780</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">44g</td>
+          <td class="td-macro">50g</td>
+          <td class="td-comment">Alta en proteína y grasas — solo si el plan lo permite</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Hamburguesa Royal / Queso Tocino</td>
+          <td class="td-qty">1 grande</td>
+          <td class="td-kcal high">803</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-comment">Muy alta en grasas — para antojos planificados</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Bacon Cheeseburger</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">840</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">47g</td>
+          <td class="td-macro">54g</td>
+          <td class="td-comment">Alta en todo — planifica el día con antelación</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Big Boy</td>
+          <td class="td-dish">American</td>
+          <td class="td-qty">1 sin papas</td>
+          <td class="td-kcal high">920</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">50g</td>
+          <td class="td-macro">55g</td>
+          <td class="td-comment">Alta en proteína y grasas — solo si tienes margen calórico</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Chilli's</td>
+          <td class="td-dish">Chili Beef Burger</td>
+          <td class="td-qty">solo hamburguesa</td>
+          <td class="td-kcal high">1020</td>
+          <td class="td-macro">58g</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">66g</td>
+          <td class="td-comment">Alta proteína, muy alta en grasas — para compartir o día libre</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="tip-banner">
+  <strong>Tip</strong>
+  Puedes pedir la hamburguesa sin papas para ahorrar ~300 kcal y ajustar carbohidratos.
+</div>
+
+<!-- CAT: Wraps & Sándwiches -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">02</span>
+      <h2 class="category-name">Wraps & Sándwiches</h2>
+    </div>
+    <p class="category-restaurants">Insólito · Subway · Starbucks · La Lucha · Pickadeli · Don Mamino · San Antonio · Silvestre</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Pechuga de Pollo</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal low">270</td>
+          <td class="td-macro">23g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-comment">Muy baja en grasas — buena opción pre-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Veggie Delite</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal low">320</td>
+          <td class="td-macro">17g</td>
+          <td class="td-macro">41g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Opción vegetariana ligera — baja en proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Starbucks</td>
+          <td class="td-dish">Napolitano Wrap</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">350</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Buena opción para snack — macros equilibrados</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Mini Chicken Fest</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">420</td>
+          <td class="td-macro">24g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Versión mini, moderada en grasas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Chicken Teriyaki</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal mod">430</td>
+          <td class="td-macro">29g</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Alta proteína, baja grasa ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">La Lucha</td>
+          <td class="td-dish">Sanguche de Pavo a la leña</td>
+          <td class="td-qty">sin papas</td>
+          <td class="td-kcal mod">433</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Muy baja en grasas, alta proteína — buena post-entreno ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Sándwich Caprese</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">450</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">44g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-comment">Moderado en grasas y carbos — sabroso</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Pita Capresse</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">485</td>
+          <td class="td-macro">20g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Moderada en grasas — algo alta en carbos</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">La Lucha</td>
+          <td class="td-dish">Sanguche de Lechón a la leña</td>
+          <td class="td-qty">sin papas</td>
+          <td class="td-kcal mod">496</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas — buena opción</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Starbucks</td>
+          <td class="td-dish">Panini Jamón y Queso</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">490</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-comment">Moderada en grasas — conveniente para el paso</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pickadeli</td>
+          <td class="td-dish">Flat Pavita Crunch</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">532</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">63g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Alta proteína, baja grasa ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Sándwich con Pollo a la plancha</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">542</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">55g</td>
+          <td class="td-macro">13g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas — muy buena opción ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pickadeli</td>
+          <td class="td-dish">Flat Chicken Cool</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">547</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">67g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Alta en proteína y carbos, baja en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Pita Ligera</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">525</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">50g</td>
+          <td class="td-macro">19g</td>
+          <td class="td-comment">Moderada en grasas, buena proteína — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">La Lucha</td>
+          <td class="td-dish">Sanguche de Pollo a la brasa</td>
+          <td class="td-qty">sin papas</td>
+          <td class="td-kcal mod">524</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">17g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — buena post-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Sándwich Mediterráneo</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">519</td>
+          <td class="td-macro">47g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-comment">Alta proteína — excelente opción ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Pita Napoli</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">545</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">59g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-comment">Alta en carbos, moderada en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Honney Mustard BBQ</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal mod">510</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">53g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-comment">Moderada en todo — buen sabor</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap César</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">572</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-comment">Alta en proteína y grasas — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Acevichado</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">600</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-comment">Moderada en grasas — sabrosa opción</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Pickadeli</td>
+          <td class="td-dish">Flat Pork Chipotle</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">591</td>
+          <td class="td-macro">46g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-comment">Alta en proteína y carbos — moderada en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pickadeli</td>
+          <td class="td-dish">Flat Avocado Tuna</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">622</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">65g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Buena proteína, alta en carbos — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Chicken Fest</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">679</td>
+          <td class="td-macro">46g</td>
+          <td class="td-macro">65g</td>
+          <td class="td-macro">26g</td>
+          <td class="td-comment">Alta en proteína y carbos — buena post-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Meatball Pepperoni</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal high">690</td>
+          <td class="td-macro">33g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">38g</td>
+          <td class="td-comment">Muy alta en grasas — ajusta el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Subway</td>
+          <td class="td-dish">Tuna</td>
+          <td class="td-qty">Pan 15cm</td>
+          <td class="td-kcal high">570</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-comment">Alta en grasas para ser atún — poca proteína relativa</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Al Pesto</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">660</td>
+          <td class="td-macro">48g</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">BBQ Chicken Wrap</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">580</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">61g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-comment">Alta en carbos, moderada en grasas — sabroso</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Cobb Solito</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">805</td>
+          <td class="td-macro">55g</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-comment">Alta en proteína y grasas — comida contundente y saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Insólito</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">825</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-comment">Muy alta en grasas y carbos — solo si tienes margen calórico</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Apaltado</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">825</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">70g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-comment">Muy alta en grasas y carbos — ideal para compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Insólito</td>
+          <td class="td-dish">Wrap Crunchy Ranch</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">823</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">77g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-comment">Muy alta en carbos y grasas — poca proteína relativa</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pickadeli</td>
+          <td class="td-dish">Flat Cheese Melted Capresse</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">762</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">66g</td>
+          <td class="td-macro">37g</td>
+          <td class="td-comment">Alta en grasas por el queso — ajusta el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Silvestre</td>
+          <td class="td-dish">Club Sandwich Silvestre</td>
+          <td class="td-qty">1u + papas</td>
+          <td class="td-kcal high">813</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">46g</td>
+          <td class="td-macro">48g</td>
+          <td class="td-comment">Alta en proteína y grasas — sin papas ahorra ~200 kcal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="tip-banner">
+  <strong>Tip</strong>
+  Pide los sándwiches sin salsas adicionales — una cucharada de mayonesa suma ~100 kcal extra.
+</div>
+
+<!-- CAT: Sushi & Comida Japonesa -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">03</span>
+      <h2 class="category-name">Sushi & Comida Japonesa</h2>
+    </div>
+    <p class="category-restaurants">EDO</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Sashimis</td>
+          <td class="td-qty">4 unid (1 tabla)</td>
+          <td class="td-kcal low">70</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">1g</td>
+          <td class="td-comment">Muy baja en kcal — casi sin carbos ni grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Nigiris</td>
+          <td class="td-qty">4 unid (1 tabla)</td>
+          <td class="td-kcal low">215</td>
+          <td class="td-macro">18g</td>
+          <td class="td-macro">29g</td>
+          <td class="td-macro">1g</td>
+          <td class="td-comment">Baja en grasas, buena proteína — ligero ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Maki California</td>
+          <td class="td-qty">10 unid</td>
+          <td class="td-kcal mod">500</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">65g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Alta en carbos — poca proteína por porción</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Maki Samurai</td>
+          <td class="td-qty">10 unid</td>
+          <td class="td-kcal mod">500</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">65g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Alta en carbos — poca proteína por porción</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Tiradito Usuzukuri</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">500</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">2g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-comment">Alta en proteína, casi sin carbos — poca saciedad calórica</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Maki Ninja</td>
+          <td class="td-qty">10 unid</td>
+          <td class="td-kcal mod">575</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">65g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en carbos, moderada en proteína</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Teru Maki</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">473</td>
+          <td class="td-macro">31g</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-comment">Mejor balance proteína:kcal de los makis — buena opción</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Maki Acevichado</td>
+          <td class="td-qty">10 unid</td>
+          <td class="td-kcal high">780</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">74g</td>
+          <td class="td-macro">38g</td>
+          <td class="td-comment">Muy alta en carbos y grasas — para compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">EDO</td>
+          <td class="td-dish">Miso Ramen</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">871</td>
+          <td class="td-macro">62g</td>
+          <td class="td-macro">72g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-comment">Alta en proteína y carbos — saciante, planifica las kcal del día ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Pokes & Bowls -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">04</span>
+      <h2 class="category-name">Pokes & Bowls</h2>
+    </div>
+    <p class="category-restaurants">Saki Poke · San Antonio · Yopo · Silvestre · Protein Food</p>
+  </div>
+
+  <div class="tip-infix">
+    <span class="tip-infix-icon">⭐</span>
+    <p><strong>Criterio estrella:</strong> Cuando el plato tiene buena proteína (más de 35g) y poco impacto calórico en grasas (menos de 15g), es una opción que encaja fácil en la mayoría de planes.</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Bowl Cobb</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">467</td>
+          <td class="td-macro">41g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en proteína, baja en carbos — saciante ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Bowl Mila</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">519</td>
+          <td class="td-macro">23g</td>
+          <td class="td-macro">53g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-comment">Equilibrado en macros — buena opción de almuerzo</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Pesto Fit</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal mod">536</td>
+          <td class="td-macro">63g</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Alta en proteína, muy baja en grasas — excelente para el plan ⭐⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Silvestre</td>
+          <td class="td-dish">Chicken Bowl</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">641</td>
+          <td class="td-macro">34g</td>
+          <td class="td-macro">83g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-comment">Alto en carbos, moderada en grasas — buena post-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Saki Poke</td>
+          <td class="td-dish">Kahuna</td>
+          <td class="td-qty">1 grande</td>
+          <td class="td-kcal high">681</td>
+          <td class="td-macro">38g</td>
+          <td class="td-macro">59g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-comment">Buena proteína y carbos — muy saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Tex Mex Bowl</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">769</td>
+          <td class="td-macro">62g</td>
+          <td class="td-macro">75g</td>
+          <td class="td-macro">27g</td>
+          <td class="td-comment">Alta en proteína y carbos — excelente post-entreno ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Bowl Pesto</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal high">820</td>
+          <td class="td-macro">51g</td>
+          <td class="td-macro">80g</td>
+          <td class="td-macro">34g</td>
+          <td class="td-comment">Muy alto en kcal — planifica el día completo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Ensaladas -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">05</span>
+      <h2 class="category-name">Ensaladas</h2>
+    </div>
+    <p class="category-restaurants">KFC · Yopo · Chilli's · Friday's · Don Mamino · Silvestre</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Ensalada Regular</td>
+          <td class="td-qty">1 pequeña</td>
+          <td class="td-kcal low">120</td>
+          <td class="td-macro">1g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Acompañamiento muy bajo en kcal — no es plato principal</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fridays</td>
+          <td class="td-dish">Porción de Papas Fritas</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">320</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">Alta en carbos, poca proteína — solo para acompañar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Chilli's</td>
+          <td class="td-dish">Grilled Chicken Salad</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">440</td>
+          <td class="td-macro">37g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — saciante y saludable ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Cesar Salad</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal mod">500</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-comment">Alta en grasas, baja en proteína — pide aderezo aparte</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Silvestre</td>
+          <td class="td-dish">Flat Chicken Salad</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">475</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">26g</td>
+          <td class="td-comment">Equilibrada en macros — sabrosa y moderada</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Tex Mex Salad</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">643</td>
+          <td class="td-macro">61g</td>
+          <td class="td-macro">48g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — muy saciante ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Ensalada Primavera</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">630</td>
+          <td class="td-macro">46g</td>
+          <td class="td-macro">37g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-comment">Alta en proteína y grasas — ajusta el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Mexicana Salad</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">745</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">49g</td>
+          <td class="td-comment">Muy alta en grasas — baja en proteína relativa</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Pollo & Fast Food -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">06</span>
+      <h2 class="category-name">Pollo & Fast Food</h2>
+    </div>
+    <p class="category-restaurants">KFC · Pardos · McDonald's · Yopo · Chilli's · Friday's · Coffee Fit · Silvestre · Protein Food</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Hot Wings</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">70</td>
+          <td class="td-macro">4g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">4g</td>
+          <td class="td-comment">Muy bajo en kcal — solo para acompañar</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">Mc Nuggets</td>
+          <td class="td-qty">4 unid</td>
+          <td class="td-kcal low">166</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Bajo en kcal — poca proteína para un snack</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Original Pierna</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal low">130</td>
+          <td class="td-macro">12g</td>
+          <td class="td-macro">4g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-comment">Baja en carbos, moderada en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Nuggets</td>
+          <td class="td-qty">4 unid</td>
+          <td class="td-kcal low">170</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Bajo en kcal — moderado en grasas, para picar algo</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Crispy Pierna</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal low">170</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Baja en carbos, algo alta en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pardos</td>
+          <td class="td-dish">1/4 Pierna s/piel</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">209</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Baja en carbos y grasas — saciante para su peso</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pardos</td>
+          <td class="td-dish">Anticuchos</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">146</td>
+          <td class="td-macro">23g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Alta en proteína, casi sin carbos — excelente snack peruano ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pardos</td>
+          <td class="td-dish">1/4 Pecho s/piel</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">272</td>
+          <td class="td-macro">37g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Alta en proteína, baja en carbos y grasas — muy eficiente en kcal ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Original Muslo</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal low">280</td>
+          <td class="td-macro">19g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">19g</td>
+          <td class="td-comment">Moderada en grasas, baja en carbos</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Nuggets</td>
+          <td class="td-qty">6 piezas</td>
+          <td class="td-kcal low">295</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-comment">Alta en grasas para ser nuggets — snack ocasional</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Original Pecho</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal low">390</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-comment">Alta en proteína, baja en carbos — buena opción ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Crispy Muslo</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal mod">330</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">23g</td>
+          <td class="td-comment">Alta en grasas comparado con la versión original</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Pieza Crispy Pecho</td>
+          <td class="td-qty">1 pieza</td>
+          <td class="td-kcal mod">530</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-comment">Alta en proteína pero más alta en grasas que el original</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Chilli's</td>
+          <td class="td-dish">Ribs House BBQ</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">720</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-macro">53g</td>
+          <td class="td-comment">Alta en proteína, muy alta en grasas — no recomendable para días sin entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Hamburguesa Fit al Plato</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">494</td>
+          <td class="td-macro">44g</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — buena versión fit ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">KFC</td>
+          <td class="td-dish">Twister</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">630</td>
+          <td class="td-macro">28g</td>
+          <td class="td-macro">53g</td>
+          <td class="td-macro">34g</td>
+          <td class="td-comment">Alto en grasas y carbos — baja eficiencia calórica</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Buffalo Wings</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">640</td>
+          <td class="td-macro">71g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">39g</td>
+          <td class="td-comment">Alta en proteína, casi sin carbos — muy alta en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Pechugona Pesto Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">687</td>
+          <td class="td-macro">72g</td>
+          <td class="td-macro">62g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas — solo si tu plan tiene margen calórico ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Buffalo Wings</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">640</td>
+          <td class="td-macro">71g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">39g</td>
+          <td class="td-comment">Alta en proteína, casi sin carbos — muy alta en grasas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="tip-banner">
+  <strong>Tip</strong>
+  El pollo sin piel ahorra entre 30–50 kcal por pieza. Pardos tiene opciones sin piel perfectas para el plan.
+</div>
+
+<!-- CAT: Desayunos & Brunch -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">07</span>
+      <h2 class="category-name">Desayunos & Brunch</h2>
+    </div>
+    <p class="category-restaurants">Protein Food · Silvestre · Ripped Protein · Coffee Fit · Starbucks · Dunkin</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Starbucks</td>
+          <td class="td-dish">Croissant Jamón y Queso</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">280</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">47g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Alta en carbos, baja en proteína y grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Starbucks</td>
+          <td class="td-dish">Napolitano Wrap</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">350</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">33g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Buena proteína para Starbucks — moderada en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Protein Breakfast</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">386</td>
+          <td class="td-macro">38g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Alta en proteína, muy baja en grasas — excelente desayuno fit ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Bowl de Avena Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">327</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">58g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Alta en carbos, baja en grasas — buena opción pre-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Arroz con Leche Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">205</td>
+          <td class="td-macro">6g</td>
+          <td class="td-macro">34g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-comment">Muy bajo en grasas — alto en carbos simples</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Silvestre</td>
+          <td class="td-dish">Avena Overnight</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">434</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">72g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Muy alta en carbos, baja en grasas — ideal pre-entreno</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Ripped Protein</td>
+          <td class="td-dish">Waffles Proteicos</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">579</td>
+          <td class="td-macro">48g</td>
+          <td class="td-macro">69g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Alta en proteína, muy baja en grasas — excelente brunch fit ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Silvestre</td>
+          <td class="td-dish">Pancakes Gluten Free</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">731</td>
+          <td class="td-macro">22g</td>
+          <td class="td-macro">142g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-comment">Muy alta en carbos — poca proteína, no muy saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Bacon, Egg & Cheese Tacos</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">980</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">54g</td>
+          <td class="td-macro">68g</td>
+          <td class="td-comment">Muy alta en grasas y carbos — ajusta todo el día</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Postres & Helados -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">08</span>
+      <h2 class="category-name">Postres & Helados</h2>
+    </div>
+    <p class="category-restaurants">Protein Food · Fitmonster · Coffee Fit · Ripped Protein · Creamer · OakBerry · Pinkberry · Dunkin · McDonald's</p>
+  </div>
+
+  <div class="tip-infix">
+    <span class="tip-infix-icon">🍦</span>
+    <p><strong>Recuerda:</strong> Si tienes antojo de postre, ajusta grasas en otra comida del día. Ningún postre está prohibido.</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Helado ToGo Fresa</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">46</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">0.6g</td>
+          <td class="td-comment">Muy bajo en kcal — buena proteína para ser helado ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Soft de Vainilla</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">32</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">0.2g</td>
+          <td class="td-comment">El más bajo en kcal — casi sin grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Soft de Chicha Morada</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">38</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">0.4g</td>
+          <td class="td-comment">Muy bajo en kcal, sin grasas — sabor peruano</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Soft de Chocolate</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">41</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">4g</td>
+          <td class="td-macro">0.5g</td>
+          <td class="td-comment">Muy bajo en kcal — para el antojo de chocolate</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Soft de Lúcuma</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">46</td>
+          <td class="td-macro">6g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">0.5g</td>
+          <td class="td-comment">Muy bajo en kcal — sabor peruano fit</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">OakBerry</td>
+          <td class="td-dish">Sorbete de Acai (cono)</td>
+          <td class="td-qty">60g 1 bola</td>
+          <td class="td-kcal low">50</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">1g</td>
+          <td class="td-comment">Muy baja en kcal — vegana, sin proteína significativa</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Helado ToGo Lúcuma</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">51</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">0.6g</td>
+          <td class="td-comment">Bajo en kcal con buena proteína — sabor local ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Helado ToGo Chocolate</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">58</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">4g</td>
+          <td class="td-macro">1.1g</td>
+          <td class="td-comment">Bajo en kcal y buena proteína — el más eficiente de los ToGo ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Helado ToGo Vainilla</td>
+          <td class="td-qty">100ml</td>
+          <td class="td-kcal low">67</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">1.2g</td>
+          <td class="td-comment">Bajo en kcal — buena proteína para ser helado</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Conito Dulce de Leche</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">93</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Muy bajo en kcal — poco valor nutricional pero inocuo</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Pionono Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">222</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-comment">Bajo en kcal — moderado en grasas y carbos</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Ripped Protein</td>
+          <td class="td-dish">Pie de Limón</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">147</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-comment">Alta en proteína para ser postre — muy baja en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Crema Volteada Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">240</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">Alta en grasas para su tamaño — poca proteína relativa — vigila el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Cheesecake de Fresa Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">236</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Bajo en kcal — moderada en carbos y grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Dunkin Donuts</td>
+          <td class="td-dish">Glaseada</td>
+          <td class="td-qty">1 donut</td>
+          <td class="td-kcal low">260</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-comment">Bajo en proteína — para el antojo, ajusta carbos</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Dunkin Donuts</td>
+          <td class="td-dish">Bavaria</td>
+          <td class="td-qty">1 donut</td>
+          <td class="td-kcal low">270</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">15g</td>
+          <td class="td-comment">Bajo en proteína — antojo ocasional, ajusta el día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Dunkin Donuts</td>
+          <td class="td-dish">Chocolate</td>
+          <td class="td-qty">1 donut</td>
+          <td class="td-kcal low">280</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">31g</td>
+          <td class="td-macro">15g</td>
+          <td class="td-comment">Bajo en proteína — disfrútalo y ajusta el día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Cuchareable Chocolucuma</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">377</td>
+          <td class="td-macro">27g</td>
+          <td class="td-macro">47g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-comment">Buena proteína para ser postre, baja en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Dunkin Donuts</td>
+          <td class="td-dish">Boston Crema</td>
+          <td class="td-qty">1 donut</td>
+          <td class="td-kcal low">300</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">37g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">El más alto en kcal de Dunkin — baja en proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Cuchareable Dolce Capriccio</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">348</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">28g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — postre fit eficiente ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Cuchareable La Intensa</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">289</td>
+          <td class="td-macro">20g</td>
+          <td class="td-macro">32g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-comment">Buena proteína, baja en grasas — postre fit saciante ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Carrot Cake Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">248</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Bajo en proteína y grasas — alto en carbos simples</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Torta de Chocolate</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">380</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en grasas — para el antojo, ajusta el resto del día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">OakBerry</td>
+          <td class="td-dish">Bar Acai y Coco</td>
+          <td class="td-qty">50g</td>
+          <td class="td-kcal low">224</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">17g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Buena proteína y grasas saludables — snack energético</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">OakBerry</td>
+          <td class="td-dish">Bar Acai y Banana</td>
+          <td class="td-qty">50g</td>
+          <td class="td-kcal low">229</td>
+          <td class="td-macro">14g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Buena proteína, moderada en grasas — snack saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pinkberry</td>
+          <td class="td-dish">Frozen Yogurt Small</td>
+          <td class="td-qty">170g</td>
+          <td class="td-kcal low">216</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">41g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-comment">Sin grasas, sin proteína — alto en carbos simples</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Ripped Protein</td>
+          <td class="td-dish">Cheesecake de Fresa</td>
+          <td class="td-qty">150g</td>
+          <td class="td-kcal low">226</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-comment">Buena proteína para ser postre, moderada en grasas ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Lucumosa</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">142</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-comment">Muy baja en kcal, buena proteína — el más eficiente de postres fit ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Cuchareable Tres Leches</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">163</td>
+          <td class="td-macro">18g</td>
+          <td class="td-macro">11g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas para 100g ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Cuchareable Chocomanjar</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">177</td>
+          <td class="td-macro">19g</td>
+          <td class="td-macro">13g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas — el mejor ratio de los cuchareables ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Cuchareable Carrot Cake</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">171</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-comment">Buena proteína, moderada en grasas — buen postre fit ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Tres Leches</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">189</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-macro">15g</td>
+          <td class="td-comment">Alta en carbos y grasas — versión fit del clásico</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Tiramisu</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal low">224</td>
+          <td class="td-macro">12g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-macro">12g</td>
+          <td class="td-comment">Equilibrado en macros — versión fit del tiramisú</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Snicker Vegano Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">282</td>
+          <td class="td-macro">6g</td>
+          <td class="td-macro">24g</td>
+          <td class="td-macro">18g</td>
+          <td class="td-comment">Alta en grasas, baja en proteína — para el antojo de chocolate</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">McDonald's</td>
+          <td class="td-dish">McFlurry Oreo</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">409</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">67g</td>
+          <td class="td-macro">13g</td>
+          <td class="td-comment">Muy alta en carbos, muy baja en proteína — antojo puntual</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Cuchareable de Alfajor</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">450</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-comment">Para el antojo — baja en proteína, ajusta el día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Alfajor Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">488</td>
+          <td class="td-macro">6g</td>
+          <td class="td-macro">80g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">Muy alta en carbos, baja en proteína — solo si tienes margen calórico</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pinkberry</td>
+          <td class="td-dish">Frozen Yogurt Medium</td>
+          <td class="td-qty">250g</td>
+          <td class="td-kcal mod">318</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">60g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-comment">Alta en carbos, sin grasas ni proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Cuchareable 3 Leches Fitnutella</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal mod">507</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">19g</td>
+          <td class="td-comment">Muy alta en proteína — el mejor postre fit en macros ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Cacao Creamy</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">455</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">41g</td>
+          <td class="td-macro">27g</td>
+          <td class="td-comment">Alta en grasas, moderada en proteína — ajusta el día</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pinkberry</td>
+          <td class="td-dish">Frozen Yogurt Large</td>
+          <td class="td-qty">400g</td>
+          <td class="td-kcal mod">490</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">89g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-comment">Sin grasas, sin proteína — muy alta en carbos simples</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Carrot Cake</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal mod">225</td>
+          <td class="td-macro">12g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">17g</td>
+          <td class="td-comment">Alta en grasas para su tamaño</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Cuchareable Alfajor de Pistacho</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">450</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-comment">Alta en carbos y grasas — para momentos especiales</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Creamer</td>
+          <td class="td-dish">Cuchareable Alfajor (proteico)</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">490</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-macro">38g</td>
+          <td class="td-comment">Muy alta en proteína y grasas — saciante pero ajusta grasas del día ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Proteinessa</td>
+          <td class="td-qty">100g</td>
+          <td class="td-kcal mod">366</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">43g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-comment">Alta en proteína, baja en grasas — muy buena relación kcal:proteína ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Snacks & Piqueos -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">09</span>
+      <h2 class="category-name">Snacks & Piqueos</h2>
+    </div>
+    <p class="category-restaurants">Fitmonster · Ripped Protein · Bembos · KFC · Pardos · Yopo · Friday's</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Protein Fudge</td>
+          <td class="td-qty">20g</td>
+          <td class="td-kcal low">24</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-comment">Micro-snack, casi sin kcal — para completar proteína sin impacto calórico ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Protein Manjar</td>
+          <td class="td-qty">30g</td>
+          <td class="td-kcal low">31</td>
+          <td class="td-macro">4g</td>
+          <td class="td-macro">2g</td>
+          <td class="td-macro">0.8g</td>
+          <td class="td-comment">Muy bajo en kcal — útil para completar proteína sin sumar carbos ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Nuggets</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">46</td>
+          <td class="td-macro">2g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-macro">3g</td>
+          <td class="td-comment">Muy bajo en kcal — no es plato principal</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Tenders</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">121</td>
+          <td class="td-macro">6g</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-comment">Bajo en kcal, baja en proteína — para picar algo ligero</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pardos</td>
+          <td class="td-dish">Anticuchos</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">146</td>
+          <td class="td-macro">23g</td>
+          <td class="td-macro">0g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Alta en proteína, casi sin carbos ni grasas — snack peruano muy eficiente ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Pardos</td>
+          <td class="td-dish">Tequeños Brasa</td>
+          <td class="td-qty">1 tequeño</td>
+          <td class="td-kcal low">135</td>
+          <td class="td-macro">8g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">7g</td>
+          <td class="td-comment">Alta en grasas — piqueo ocasional, mejor compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Bembos</td>
+          <td class="td-dish">Cheese Fingers</td>
+          <td class="td-qty">4 piezas</td>
+          <td class="td-kcal low">331</td>
+          <td class="td-macro">13g</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">19g</td>
+          <td class="td-comment">Alta en grasas y carbos — solo para compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Ripped Protein</td>
+          <td class="td-dish">Barra Proteica Mantequilla Maní</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">367</td>
+          <td class="td-macro">25g</td>
+          <td class="td-macro">28g</td>
+          <td class="td-macro">19g</td>
+          <td class="td-comment">Alta en proteína y grasas — snack completo y saciante ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Yopo</td>
+          <td class="td-dish">Nachos con Guacamole</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">383</td>
+          <td class="td-macro">7g</td>
+          <td class="td-macro">42g</td>
+          <td class="td-macro">21g</td>
+          <td class="td-comment">Alta en carbos y grasas — para compartir en mesa</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Sandwich Gelato Fitoreo</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal low">297</td>
+          <td class="td-macro">19g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-macro">9g</td>
+          <td class="td-comment">Buena proteína para ser snack dulce — moderada en grasas</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Fitalfajor Manjar</td>
+          <td class="td-qty">1/2 unid (80g)</td>
+          <td class="td-kcal low">318</td>
+          <td class="td-macro">16g</td>
+          <td class="td-macro">45g</td>
+          <td class="td-macro">8g</td>
+          <td class="td-comment">Alta en carbos, moderada en grasas — snack ocasional</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Porción de Papas Fritas</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">320</td>
+          <td class="td-macro">5g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">16g</td>
+          <td class="td-comment">Alta en carbos y grasas — solo para compartir o acompañar</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Mozzarella Sticks</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal high">840</td>
+          <td class="td-macro">39g</td>
+          <td class="td-macro">54g</td>
+          <td class="td-macro">52g</td>
+          <td class="td-comment">Alta en proteína, muy alta en grasas — solo para compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Onion Rings</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal high">1190</td>
+          <td class="td-macro">15g</td>
+          <td class="td-macro">155g</td>
+          <td class="td-macro">55g</td>
+          <td class="td-comment">Muy alta en carbos y grasas — máximo para compartir</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT: Pizza, Pastas & Platos de Restaurante -->
+<div class="category">
+  <div class="category-header">
+    <div class="category-left">
+      <span class="category-number">10</span>
+      <h2 class="category-name">Pizza, Pastas & Platos de Restaurante</h2>
+    </div>
+    <p class="category-restaurants">Mamma Tomato · Don Mamino · Coffee Fit · Protein Food · Silvestre</p>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge low">Bajo en kcal</span>
+      <span class="tier-range">Hasta 400 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Mamma Tomato</td>
+          <td class="td-dish">Pizza Americana</td>
+          <td class="td-qty">1 cuadrado</td>
+          <td class="td-kcal low">207</td>
+          <td class="td-macro">33g</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">4g</td>
+          <td class="td-comment">Alta en proteína, muy baja en grasas — eficiente en kcal ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Ravioles Ricotta y Espinaca</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">404</td>
+          <td class="td-macro">17g</td>
+          <td class="td-macro">56g</td>
+          <td class="td-macro">14g</td>
+          <td class="td-comment">Alta en carbos, moderada en grasas — buena saciedad</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Ensalada de Frutas Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal low">346</td>
+          <td class="td-macro">10g</td>
+          <td class="td-macro">63g</td>
+          <td class="td-macro">6g</td>
+          <td class="td-comment">Alta en carbos simples, baja en proteína — solo en días activos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge mod">Moderado en kcal</span>
+      <span class="tier-range">401 – 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">San Antonio</td>
+          <td class="td-dish">Butifarras de Pavo</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">413</td>
+          <td class="td-macro">26g</td>
+          <td class="td-macro">40g</td>
+          <td class="td-macro">17g</td>
+          <td class="td-comment">Clásico limeño — moderado en grasas, buena proteína</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Don Mamino</td>
+          <td class="td-dish">Lomo con Champiñones</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">572</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">51g</td>
+          <td class="td-macro">25g</td>
+          <td class="td-comment">Alta en proteína y carbos, moderada en grasas — saciante</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Tartaleta de Fresa Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">323</td>
+          <td class="td-macro">11g</td>
+          <td class="td-macro">36g</td>
+          <td class="td-macro">15g</td>
+          <td class="td-comment">Moderada en grasas y carbos — postre liviano de café</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Coffee Fit</td>
+          <td class="td-dish">Lomo al Pesto Fit</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal mod">592</td>
+          <td class="td-macro">49g</td>
+          <td class="td-macro">54g</td>
+          <td class="td-macro">20g</td>
+          <td class="td-comment">Alta en proteína, moderada en grasas — excelente opción fit ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-label-row">
+      <span class="tier-badge high">Alto en kcal</span>
+      <span class="tier-range">Más de 600 kcal</span>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Restaurante</th>
+          <th>Plato</th>
+          <th>Cantidad</th>
+          <th class="num">Kcal</th>
+          <th class="num">Prot.</th>
+          <th class="num">Carbs</th>
+          <th class="num">Grasas</th>
+          <th class="last">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-restaurant">Protein Food</td>
+          <td class="td-dish">Wrap Mexicano</td>
+          <td class="td-qty">1 porción</td>
+          <td class="td-kcal high">663</td>
+          <td class="td-macro">70g</td>
+          <td class="td-macro">27g</td>
+          <td class="td-macro">35g</td>
+          <td class="td-comment">Alta en proteína y grasas — solo para días de entrenamiento intenso ⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Fitmonster</td>
+          <td class="td-dish">Chicken Protein Wrap</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">646</td>
+          <td class="td-macro">73g</td>
+          <td class="td-macro">30g</td>
+          <td class="td-macro">26g</td>
+          <td class="td-comment">Muy alta en proteína, moderada en grasas — ideal para post-entreno ⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Crispy Chicken Tenders c/ papas</td>
+          <td class="td-qty">1 plato</td>
+          <td class="td-kcal high">1040</td>
+          <td class="td-macro">31g</td>
+          <td class="td-macro">73g</td>
+          <td class="td-macro">70g</td>
+          <td class="td-comment">Muy alta en grasas — solo si tienes margen calórico alto, mejor compartir</td>
+        </tr>
+        <tr>
+          <td class="td-restaurant">Friday's</td>
+          <td class="td-dish">Bacon & Egg Club Sandwich</td>
+          <td class="td-qty">1 unid</td>
+          <td class="td-kcal high">1530</td>
+          <td class="td-macro">59g</td>
+          <td class="td-macro">74g</td>
+          <td class="td-macro">111g</td>
+          <td class="td-comment">Muy alta en grasas, carbos y proteína — para compartir entre 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── FINAL TIPS ── -->
+<div class="final-tips">
+  <p class="section-label">Recuerda siempre</p>
+  <h2 class="final-tips-heading">Tips para<br><em>tomar mejores</em><br>decisiones.</h2>
+  <div class="final-tips-grid">
+    <div class="final-tip-card">
+      <span class="final-tip-icon">🔥</span>
+      <h3 class="final-tip-title">Primero las kcal.</h3>
+      <p class="final-tip-body">Antes de elegir, revisa cuántas calorías tienes disponibles. Dentro de ese rango, elige la opción con mejor perfil de macros.</p>
+    </div>
+    <div class="final-tip-card">
+      <span class="final-tip-icon">🍰</span>
+      <h3 class="final-tip-title">Si comes postre,</h3>
+      <p class="final-tip-body">ajusta grasas en otra comida del día. No hay alimentos prohibidos.</p>
+    </div>
+    <div class="final-tip-card">
+      <span class="final-tip-icon">🥗</span>
+      <h3 class="final-tip-title">Puedes compartir entradas.</h3>
+      <p class="final-tip-body">Dividir los piqueos te ayuda a disfrutar sin comprometer las kcal del día.</p>
+    </div>
+    <div class="final-tip-card">
+      <span class="final-tip-icon">🥤</span>
+      <h3 class="final-tip-title">Bebidas sin azúcar.</h3>
+      <p class="final-tip-body">Agua, agua con gas, té helado sin azúcar o gaseosa light. Ahorra 150–200 kcal invisibles.</p>
+    </div>
+    <div class="final-tip-card">
+      <span class="final-tip-icon">🎯</span>
+      <h3 class="final-tip-title">No necesitas comer perfecto</h3>
+      <p class="final-tip-body">para progresar. Un 80% de consistencia sostenida supera el 100% esporádico.</p>
+    </div>
+    <div class="final-tip-card">
+      <span class="final-tip-icon">📊</span>
+      <h3 class="final-tip-title">Usa esta guía como referencia,</h3>
+      <p class="final-tip-body">no como regla. Si el restaurante tiene algo similar, aplica las kcal y macros del plato más parecido para estimar.</p>
+    </div>
+  </div>
+  <p class="final-quote">La mejor dieta es la que puedes mantener con alegría.</p>
+</div>
+
+</body>
+</html>
