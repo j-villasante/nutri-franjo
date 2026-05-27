@@ -23,7 +23,7 @@ const sessionConfig = {
 
 app.use(session(sessionConfig, app));
 app.use(bodyParser());
-app.use(serve("public"));
+app.use(serve("public", { index: false }));
 
 app.use(async (ctx, next) => {
   try {
