@@ -5,6 +5,7 @@ import bodyParser from "koa-bodyparser";
 import session from "koa-session";
 import router from "./routes/index.js";
 import authRouter from "./routes/auth.js";
+import adminRouter from "./routes/admin.js";
 
 const app = new Koa();
 
@@ -36,6 +37,7 @@ app.use(async (ctx, next) => {
 });
 
 app.use(authRouter.routes()).use(authRouter.allowedMethods());
+app.use(adminRouter.routes()).use(adminRouter.allowedMethods());
 app.use(router.routes()).use(router.allowedMethods());
 
 const PORT = process.env.PORT || 3000;
